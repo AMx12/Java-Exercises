@@ -1,0 +1,18 @@
+
+public class Car extends Vehicle {
+	public boolean isConvertable;
+	public int wheelSize;
+	
+	public Car(boolean isConvertable, int wheelSize, int engineSize, int wheelCount) {
+		super(engineSize, wheelCount);
+		this.isConvertable = isConvertable;
+		this.wheelSize = wheelSize;
+		
+		
+	}
+	
+	public String toString() {
+		return "Engine Size: " + super.engineSize ;
+	}
+
+}

@@ -1,0 +1,9 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		Car c = new Car(200, 4, 12, true);
+		System.out.println(c);
+	}
+
+}

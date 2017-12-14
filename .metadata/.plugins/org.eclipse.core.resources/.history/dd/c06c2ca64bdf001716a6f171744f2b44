@@ -1,0 +1,12 @@
+import java.util.Arraylist;
+
+public class Garage {
+	ArrayList<Vehicle> garage = new ArrayList<>();
+	
+	public void addVehicle(Vehicle store) {
+		garage.add(store);
+	}
+	
+	
+	
+}

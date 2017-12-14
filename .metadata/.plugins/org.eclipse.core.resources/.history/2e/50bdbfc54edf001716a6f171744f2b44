@@ -1,0 +1,16 @@
+
+public class Boat extends Vehicle {
+	public boolean hasSail;
+	public int rudderSize;
+
+	public Boat(int engineSize, int wheelCount, int rudderSize, boolean hasSail) {
+		super(engineSize, wheelCount);
+		this.hasSail = hasSail;
+		this.rudderSize = rudderSize;
+	}
+	
+	public String toString() {
+		return "Engine Size: " + super.engineSize + ", Wheels: " + super.wheelCount + ", Rudder size: " + this.rudderSize
+				+ ", Sail? " + this.hasSail;
+	}
+}

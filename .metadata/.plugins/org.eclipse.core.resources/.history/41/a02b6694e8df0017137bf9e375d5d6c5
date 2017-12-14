@@ -1,0 +1,27 @@
+
+public class DogComp {
+
+	Dog[] dogList = new Dog[100];
+
+	public void printPositions(int positionExclude) {
+		for (Dog i : dogList) {
+			if (i.getPosition() == positionExclude) {
+				System.out.println(i.getDogName());
+			} else {
+				System.out.println(i.getPosition());
+			}
+		}
+	}
+	
+	public void autogenDogs() {
+		for(int x = 0; x < dogList.length; x++) {
+			Dog doggo = new Dog();
+			doggo.setPosition(x+1);
+			doggo.setDogName("Dog" + x);
+			doggo.setDogAge(5);
+			doggo.setDogHeight(6.7);
+			dogList[x] = doggo;
+		}
+	}
+
+}

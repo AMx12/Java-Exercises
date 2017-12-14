@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+
+public class AlbumArray {
+
+	public static void main(String[] args) {
+		ArrayList<AlbumInfo> AlbumList = new ArrayList<>();
+		
+		AlbumInfo AlbumOne = new AlbumInfo ("Tell Your World", "livetune", 12);
+		AlbumInfo AlbumTwo = new AlbumInfo ("Greatest Idol", "Mitchie M", 13);
+		AlbumInfo AlbumThree = new AlbumInfo ("Conti New", "DECO27", 12);
+		AlbumInfo AlbumFour = new AlbumInfo ("Thirty", "HiroyukiODA", 9);
+		
+		AlbumList.add(AlbumOne);
+		AlbumList.add(AlbumTwo);
+		AlbumList.add(AlbumThree);
+		AlbumList.add(AlbumFour);
+		
+		System.out.println(AlbumList);
+		
+	}
+
+}

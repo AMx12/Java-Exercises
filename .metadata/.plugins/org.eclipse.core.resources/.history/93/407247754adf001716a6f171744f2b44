@@ -1,0 +1,11 @@
+
+public class Vehicle {
+	public int engineSize;
+	public int wheelCount;
+
+	public Vehicle(int engineSize, int wheelCount) {
+		this.engineSize = engineSize;
+		this.wheelCount = wheelCount;
+	}
+	
+}

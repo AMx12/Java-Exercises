@@ -1,0 +1,11 @@
+
+public abstract Vehicle {
+	protected int engineSize;
+	protected int wheelCount;
+
+	public Vehicle(int engineSize, int wheelCount) {
+		this.engineSize = engineSize;
+		this.wheelCount = wheelCount;
+	}
+	
+}

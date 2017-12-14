@@ -1,0 +1,9 @@
+
+public class People {
+
+	public static void main(String[] args) {
+		Person P = new Person("Dave", 23, "Vet");
+		System.out.println(P);
+	}
+
+}

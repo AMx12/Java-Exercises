@@ -1,0 +1,17 @@
+
+public class EvenSpace {
+
+	public static void main(String[] args) {
+		EvenSpace calculate = new EvenSpace();
+		System.out.println(calculate.checkSpacing(10, 12, 14));
+	}
+
+	public boolean checkSpacing(int first, int second, int third) {
+		boolean isSpacedEvenly = false;
+		if (first - second == second - third) {
+			isSpacedEvenly = true;
+		}
+		return isSpacedEvenly;
+	}
+
+}

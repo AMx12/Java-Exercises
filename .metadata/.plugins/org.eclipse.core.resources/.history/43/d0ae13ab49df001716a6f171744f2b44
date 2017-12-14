@@ -1,0 +1,8 @@
+import java.util.Arraylist;
+
+public class Garage {
+	ArrayList<Vehicle> Garage = new ArrayList<>();
+	
+	
+	
+}

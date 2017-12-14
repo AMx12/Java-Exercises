@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+
+public class Garage {
+	// Creates a new ArrayList called "garage"
+	public ArrayList<Vehicle> garage = new ArrayList<>();
+
+	// Function to add a vehicle to the array
+	public void addVehicle(Vehicle store) {
+		garage.add(store);
+	}
+
+	// Function to output all vehicles in the array
+	public void outputVehicles() {
+		for (Vehicle v : garage) {
+			System.out.println(v);
+		}
+	}
+
+}

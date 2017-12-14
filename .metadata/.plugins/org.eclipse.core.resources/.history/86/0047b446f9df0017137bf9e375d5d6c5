@@ -1,0 +1,33 @@
+
+public class factRun {
+	public static void main(String[] args) {
+
+		System.out.println(checkFactorial(190));
+
+//		System.out.println(checkFactorialWhile(190));
+
+	}
+
+	public static String checkFactorial(int num) {
+		double divideBy = num;
+		for (int i = 1; i < num; i++) {
+			divideBy = divideBy / i;
+			if (divideBy == 1) {
+				return num + " factorial of " + i + "!";
+			} else if (divideBy < 1) {
+				return "None!";
+			}
+
+		}
+		return "None!";
+	}
+
+//	public static String checkFactorialWhile(int num) {
+//		double divideBy = num;
+//		int count = 1;
+//		while (divideBy > 1) {
+//			divideBy = divideBy / ++count;
+//		}
+//		return num + " equals " + count + "!";
+//	}
+}

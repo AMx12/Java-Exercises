@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Paint&apos; to &apos;PaintInfo&apos;&#x0D;&#x0A;- Original project: &apos;PaintWiz&apos;&#x0D;&#x0A;- Original element: &apos;Paint&apos;&#x0D;&#x0A;- Renamed element: &apos;PaintInfo&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Paint&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{Paint.java[Paint" matchStrategy="1" name="PaintInfo" qualified="false" references="true" similarDeclarations="false" stamp="1513270482340" textual="false" version="1.0"/>
+</session>

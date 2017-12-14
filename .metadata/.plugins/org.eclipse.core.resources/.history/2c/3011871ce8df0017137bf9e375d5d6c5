@@ -1,0 +1,16 @@
+
+public class dogComp {
+	
+	Dog[] dogList = new Dog[100];
+	
+	public void printPositions(int positionExclude) {
+		for (Dog i : dogList) {
+			if (i.getPosition()==positionExclude) {
+				System.out.println(i.getDogName());
+			} else {
+				System.out.println(i.getPosition());
+			}
+		}
+	}
+
+}

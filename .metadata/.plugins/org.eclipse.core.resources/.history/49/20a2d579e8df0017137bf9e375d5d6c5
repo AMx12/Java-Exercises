@@ -1,0 +1,11 @@
+
+public class mainRun {
+
+	public static void main(String[] args) {
+
+		Dog[] dogList = new Dog[100];
+
+		System.out.println(dogList[0]);
+	}
+
+}

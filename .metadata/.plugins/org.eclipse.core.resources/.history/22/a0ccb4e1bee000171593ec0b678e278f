@@ -1,0 +1,14 @@
+
+public class nTwice {
+
+	public static void main(String[] args) {
+		nTwice input = new nTwice();
+		System.out.println(input.NTwice("", 0));
+	}
+
+	public String NTwice(String stringInput, int intInput) {
+		
+		return "";
+	}
+
+}

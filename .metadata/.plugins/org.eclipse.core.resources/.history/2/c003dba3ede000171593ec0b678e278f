@@ -1,0 +1,15 @@
+
+abstract class Paint {
+
+	abstract String paintName();
+
+	abstract int paintSize();
+
+	abstract int maxCoverage();
+
+	abstract double paintPrice();
+
+	Paint() {
+		System.out.println("Paint up!");
+	}
+}

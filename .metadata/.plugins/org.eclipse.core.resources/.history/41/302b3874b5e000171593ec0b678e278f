@@ -1,0 +1,11 @@
+
+public class nResult {
+
+	public static void main(String[] args) {
+		StringChar getChar = new nResult();
+		System.out.println(getChar.nResult());
+	}
+	
+	public String 
+
+}

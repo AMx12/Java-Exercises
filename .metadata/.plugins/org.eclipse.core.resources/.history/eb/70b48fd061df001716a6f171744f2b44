@@ -1,0 +1,13 @@
+
+public abstract class Vehicle {
+	public int engineSize;
+	public int wheelCount;
+//	public int price;
+
+	public Vehicle(int engineSize, int wheelCount) {
+		this.engineSize = engineSize;
+		this.wheelCount = wheelCount;
+//		this.price = price;
+	}
+
+}

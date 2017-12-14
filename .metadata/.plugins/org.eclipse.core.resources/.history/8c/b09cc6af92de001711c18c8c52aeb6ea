@@ -1,0 +1,19 @@
+
+public class Blackjack {
+
+	public static void main(String[] args) {
+		Blackjack closest = new Blackjack();
+		System.out.println(closest.cardSum(18,21));
+	}
+
+	public int cardSum(int player, int dealer)	{
+		int winner;
+		if (player > dealer) {
+			winner = player;
+		}
+		else	{
+			winner = dealer;
+		}
+		return winner;
+	}
+}

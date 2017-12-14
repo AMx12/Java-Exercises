@@ -1,0 +1,10 @@
+
+public class Boat extends Vehicle {
+	public boolean hasSail;
+	public int rudderSize;
+	//
+	// //public Boat(boolean hasSail, int rudderSize) {
+	// this.hasSail = hasSail;
+	// this.rudderSize = rudderSize;
+	// }
+}

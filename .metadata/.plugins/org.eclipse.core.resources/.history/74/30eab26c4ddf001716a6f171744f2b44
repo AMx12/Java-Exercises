@@ -1,0 +1,12 @@
+
+public class Tank extends Vehicle {
+	public boolean ammoLoaded;
+	public int armourThickness;
+
+	public Tank(boolean ammoLoaded, int armourThickness, int engineSize, int wheelCount) {
+		 super(engineSize, wheelCount);
+	 	this.ammoLoaded = ammoLoaded;
+	 	this.armourThickness = armourThickness;
+	 }
+
+}

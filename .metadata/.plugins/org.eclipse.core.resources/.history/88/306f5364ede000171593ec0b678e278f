@@ -1,0 +1,10 @@
+
+public class CheapoMax extends Paint {
+
+	public String CheapoMax() {
+
+		return "";
+
+	}
+
+}

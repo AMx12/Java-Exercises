@@ -1,0 +1,31 @@
+
+public class FindFibonacci {
+
+	public static void main(String[] args) {
+		FindFibonacci result = new FindFibonacci();
+		System.out.println(result.Fibonacci(0)); // 0
+		System.out.println(result.Fibonacci(1)); // 1
+		System.out.println(result.Fibonacci(2)); // 1
+		System.out.println(result.Fibonacci(3)); // 2
+		System.out.println(result.Fibonacci(4)); // 3
+		System.out.println(result.Fibonacci(5)); // 5
+		System.out.println(result.Fibonacci(6)); // 8
+	}
+
+	public int Fibonacci(int numberInput) {
+		int fibonacciSecondPrevious = 0;
+		int fibonacciPrevious = 1;
+		int fibonacciNumber = 0;
+
+		if (numberInput == 0) {
+			fibonacciNumber = 0;
+		} else {
+			for (int i = 0; i < numberInput; i++) {
+				fibonacciNumber = fibonacciPrevious + fibonacciSecondPrevious;
+				fibonacciSecondPrevious = fibonacciSecondPrevious + fibonacciPrevious;
+			}
+		}
+
+		return fibonacciNumber;
+	}
+}

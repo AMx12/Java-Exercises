@@ -1,0 +1,11 @@
+
+public class Tank {
+	public boolean ammoLoaded; 
+	public int armourThickness;
+	
+	public Boat(boolean ammoLoaded, int armourThickness) {
+		this.ammoLoaded = ammoLoaded;
+		this.armourThickness = armourThickness;
+	}
+	
+}

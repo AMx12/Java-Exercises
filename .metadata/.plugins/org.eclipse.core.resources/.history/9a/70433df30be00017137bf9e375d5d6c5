@@ -1,0 +1,20 @@
+
+public class DoubleChar {
+
+	public static void main(String[] args) {
+		DoubleChar duplicate = new DoubleChar();
+		System.out.println(duplicate.doubleUp("Word"));
+	}
+
+	public String doubleUp(String input) {
+		String doubleWord = null;
+		char doubleChar;
+		for (int i = 0; i < (input.length() - 1); i++) {
+			input.charAt(i) = doubleChar;
+			doubleWord = ;
+			
+		}
+		return doubleWord;
+	}
+	
+}

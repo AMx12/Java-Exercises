@@ -1,0 +1,13 @@
+
+public class nResult {
+
+	public static void main(String[] args) {
+		nResult input = new nResult();
+		System.out.println(input.NResult(""));
+	}
+
+	public String NResult(String stringInput) {
+		return "";
+	}
+
+}

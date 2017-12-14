@@ -1,0 +1,45 @@
+
+public abstract class Paint {
+
+	Paint() {
+		System.out.println("Paint up!");
+	}
+
+	String paintName = "No Name";
+	int paintSize = -1;
+	int maxCoverage = -1;
+	double price = -1;
+
+	public String getPaintName() {
+		return paintName;
+	}
+
+	public void setPaintName(String paintName) {
+		this.paintName = paintName;
+	}
+
+	public int getPaintSize() {
+		return paintSize;
+	}
+
+	public void setPaintSize(int paintSize) {
+		this.paintSize = paintSize;
+	}
+
+	public int getMaxCoverage() {
+		return maxCoverage;
+	}
+
+	public void setMaxCoverage(int maxCoverage) {
+		this.maxCoverage = maxCoverage;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+}
