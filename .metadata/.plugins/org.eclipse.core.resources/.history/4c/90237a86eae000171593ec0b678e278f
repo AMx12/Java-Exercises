@@ -1,6 +1,0 @@
-
-public class CheapoMax extends Paint {
-	public void cheapName() {
-
-	}
-}

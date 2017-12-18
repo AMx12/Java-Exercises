@@ -9,16 +9,24 @@ public class AdvMain {
 		mapGrid.treasure.createTreasure();
 		mapGrid.startGame();
 
-		System.out.println("By grid co-ords:");
+		// System.out.println("By grid co-ords:");
 		System.out.println(mapGrid.strPlayerIsHere());
 		System.out.println(mapGrid.strTreasureIsHere());
-		System.out.println();
-		System.out.println("By player co-ords:");
-		System.out.println("You are at: " + mapGrid.player.playerX + ", " + mapGrid.player.playerY);
-		System.out.println("The treasure is at: " + mapGrid.treasure.treasureX + ", " + mapGrid.treasure.treasureY);
+		// System.out.println();
+		// System.out.println("By player co-ords:");
+		// System.out.println("You are at: " + mapGrid.player.playerX + ", " +
+		// mapGrid.player.playerY);
+		// System.out.println("The treasure is at: " + mapGrid.treasure.treasureX + ", "
+		// + mapGrid.treasure.treasureY);
 
-		if (mapGrid.player.playerX == mapGrid.treasure.treasureX
-				&& mapGrid.player.playerY == mapGrid.treasure.treasureY) {
+		// if (mapGrid.player.playerX == mapGrid.treasure.treasureX
+		// && mapGrid.player.playerY == mapGrid.treasure.treasureY) {
+		// System.out.println("You found it!");
+		// } else {
+		// System.out.println("The treasure continues to elude you.");
+		// }
+
+		if (mapGrid.intPlayerIsHere() == mapGrid.intTreasureIsHere()) {
 			System.out.println("You found it!");
 		} else {
 			System.out.println("The treasure continues to elude you.");
@@ -26,7 +34,9 @@ public class AdvMain {
 
 		System.out.println();
 		move.moveNorth();
-		System.out.println("By grid co-ords:");
+		// System.out.println("By grid co-ords:");
 		System.out.println(mapGrid.strPlayerIsHere());
+		// System.out.println(mapGrid.intPlayerIsHere());
+
 	}
 }

@@ -9,6 +9,8 @@ public class AdvMap {
 
 	public int playerIsX = -1;
 	public int playerIsY = -1;
+	public int treasureIsX = -1;
+	public int treasureIsY = -1;
 
 	int[][] map = new int[mapX][mapY];
 
@@ -29,6 +31,22 @@ public class AdvMap {
 
 	public int getMapY() {
 		return mapY;
+	}
+
+	public int getPlayerIsX() {
+		return playerIsX;
+	}
+
+	public void setPlayerIsX(int playerIsX) {
+		this.playerIsX = playerIsX;
+	}
+
+	public int getPlayerIsY() {
+		return playerIsY;
+	}
+
+	public void setPlayerIsY(int playerIsY) {
+		this.playerIsY = playerIsY;
 	}
 
 	public void placePlayer() {
@@ -62,10 +80,20 @@ public class AdvMap {
 		for (int i = 0; i < map.length; i++) {
 			for (int j = 0; j < map.length; j++) {
 				if (map[i][j] == 2) {
+					treasureIsX = i;
+					treasureIsY = j;
 					return "The treasure is at: " + i + ", " + j;
 				}
 			}
 		}
 		return null;
+	}
+
+	public int intPlayerIsHere() {
+		return map[playerIsX][playerIsX];
+	}
+
+	public int intTreasureIsHere() {
+		return map[treasureIsX][treasureIsY];
 	}
 }

@@ -1,9 +1,14 @@
 
 public class Movement {
 	AdvMap mapGrid = new AdvMap();
+	PlayerPosition player = new PlayerPosition();
 
 	public void moveNorth() {
-		mapGrid.map[mapGrid.playerIsX][mapGrid.playerIsY] = mapGrid.map[mapGrid.playerIsX][mapGrid.playerIsY - 1];
+		System.out.println("You move North.");
+		// mapGrid.map[mapGrid.playerIsX][mapGrid.playerIsY] =
+		// mapGrid.map[mapGrid.playerIsX][mapGrid.playerIsY - 1];
+		mapGrid.setPlayerIsY(player.playerX--);
+
 	}
 
 	public void moveEast() {
