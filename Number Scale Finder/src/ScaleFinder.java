@@ -7,11 +7,7 @@ public class ScaleFinder {
 		System.out.print("Enter a number: ");
 		String strInput = userInput.nextLine();
 		System.out.println(find.findScale(strInput));
-
 		userInput.close();
-
-		// System.out.println(find.findScale("123456789123456789123456"));
-
 	}
 
 	public String findScale(String input) {

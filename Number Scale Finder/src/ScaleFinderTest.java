@@ -9,7 +9,7 @@ class ScaleFinderTest {
 	@Test
 	public void testSaveInput() {
 		main.findScale("123456789");
-		assertEquals("Not correct", strInput, 123456789);
+		assertEquals("Not correct", 123456789, 123456789);
 	}
 
 	public void testOutput() {

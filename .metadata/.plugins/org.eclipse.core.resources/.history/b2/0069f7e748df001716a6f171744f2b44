@@ -1,9 +1,0 @@
-import java.util.Arraylist;
-
-public class Garage {
-	Garage array = new Garage();
-	ArrayList<Vehicle> Garage = new ArrayList<>();
-	
-	
-	
-}
