@@ -22,8 +22,8 @@ public class Grid {
 		for (int i = 0; i < gameGrid.length; i++) {
 			// Loops through the row
 			for (int j = 0; j < gameGrid.length; j++) {
-				// Initialises every cell as "?"
-				gameGrid[i][j] = '?';
+				// Initialises every cell as " "
+				gameGrid[i][j] = ' ';
 			}
 		}
 	}
@@ -39,7 +39,7 @@ public class Grid {
 	public boolean checkIfOpen(int inputX, int inputY) {
 		boolean isOpen = false;
 
-		if (gameGrid[inputX][inputY] == '?') {
+		if (gameGrid[inputX][inputY] == ' ') {
 			isOpen = true;
 		}
 
