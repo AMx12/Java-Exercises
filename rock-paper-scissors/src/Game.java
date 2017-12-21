@@ -6,8 +6,8 @@ public class Game {
 	private final int LOSE = 0;
 
 	public Player game(Player p1, Player p2, int bestOf) {
-		int s1 = 0;
-		int s2 = 0;
+		int p1Score = 0;
+		int p2Score = 0;
 		
 		int winningScore = (int) Math.ceil(bestOf/2.f);
 		
@@ -15,29 +15,29 @@ public class Game {
 		
 		System.out.println("Rock, Paper, Scissors! First to: " + winningScore);
 		
-		while (s1 < winningScore && s2 < winningScore) {
+		while (p1Score < winningScore && p2Score < winningScore) {
 			
-			System.out.printf("\nRound %d %s : %d | %s : %d\n", round, p1.getName(), s1, p2.getName(), s2);
-			Move m1 = p1.playerTurn();
-			Move m2 = p2.playerTurn();
+			System.out.printf("\nRound %d %s : %d | %s : %d\n", round, p1.getName(), p1Score, p2.getName(), p2Score);
+			Move p1Hand = p1.playerTurn();
+			Move p2Hand = p2.playerTurn();
 			
 			System.out.println();
-			System.out.println(p1.getName() + " used " + m1);
-			System.out.println(p2.getName() + " used " + m2);
+			System.out.println(p1.getName() + " used " + p1Hand);
+			System.out.println(p2.getName() + " used " + p2Hand);
 			System.out.println();
 			
-			p1.observe(m2);
-			p2.observe(m1);
+			p1.observe(p2Hand);
+			p2.observe(p1Hand);
 
-			int x = result(m1, m2);
+			int handResult = result(p1Hand, p2Hand);
 
-			if (x == WIN) {
+			if (handResult == WIN) {
 				System.out.println(p1.getName() + " wins the round.");
-				s1++;
+				p1Score++;
 			}
-			else if (x == LOSE) {
+			else if (handResult == LOSE) {
 				System.out.println(p2.getName() + " wins the round.");
-				s2++;
+				p2Score++;
 			}
 			else {
 				System.out.println("It's a draw...");
@@ -45,9 +45,9 @@ public class Game {
 			
 			round++;
 		}
-		System.out.printf("\n%s : %d | %s : %d\n\n", p1.getName(), s1, p2.getName(), s2);
+		System.out.printf("\n%s : %d | %s : %d\n\n", p1.getName(), p1Score, p2.getName(), p2Score);
 		
-		if (s1 == winningScore) {
+		if (p1Score == winningScore) {
 			System.out.println(p1.getName() + " wins the game!");
 			return p1;
 		}
@@ -57,10 +57,10 @@ public class Game {
 		}
 	}
 
-	private int result(Move m1, Move m2) {
-		switch (m1) {
+	private int result(Move p1Hand, Move p2Hand) {
+		switch (p1Hand) {
 		case PAPER:
-			switch (m2) {
+			switch (p2Hand) {
 			case PAPER:
 				return DRAW;
 			case ROCK:
@@ -69,7 +69,7 @@ public class Game {
 				return LOSE;
 			}
 		case ROCK:
-			switch (m2) {
+			switch (p2Hand) {
 			case PAPER:
 				return LOSE;
 			case ROCK:
@@ -79,7 +79,7 @@ public class Game {
 
 			}
 		case SCISSORS:
-			switch (m2) {
+			switch (p2Hand) {
 			case PAPER:
 				return WIN;
 			case ROCK:
