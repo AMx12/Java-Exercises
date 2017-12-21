@@ -11,7 +11,7 @@ public class Grid {
 	Destroyer destroy = new Destroyer();
 	Placement move = new Placement();
 
-	public int maximumShots = 12;
+	public int maximumShots = 3;
 	int gridX = 5;
 	int gridY = gridX;
 
@@ -130,10 +130,15 @@ public class Grid {
 	}
 
 	public String displayGrid() {
-		String mapOutput = "";
-		// Loops through every column
+		String mapOutput = "    ";
+		for (int count = 0; count < gameGrid.length; count++) {
+			mapOutput += (count + 1) + "    ";
+		}
+		mapOutput += "\n";
+		// Loops through every row
 		for (int i = 0; i < gameGrid.length; i++) {
-			// Loops through the row
+			mapOutput += (i + 1) + " ";
+			// Loops through the column
 			for (int j = 0; j < gameGrid.length; j++) {
 				// Prints the contents of each cell
 				mapOutput += " [" + gameGrid[i][j] + "] ";
