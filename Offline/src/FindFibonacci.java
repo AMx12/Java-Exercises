@@ -6,7 +6,7 @@ public class FindFibonacci {
 		// System.out.print("Enter the nth fibonacci number you would like to know: ");
 		// String numInput = userScanner.nextLine();
 		// System.out.println(result.Fibonacci(numInput));
-		System.out.println(result.Fibonacci(75));
+		System.out.println(result.Fibonacci(12));
 	}
 
 	public String Fibonacci(long numberInput) {
