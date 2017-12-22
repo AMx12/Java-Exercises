@@ -12,7 +12,7 @@ public class Grid {
 	Placement move = new Placement();
 
 	public int maximumShots = 3;
-	int gridX = 5;
+	int gridX = 8;
 	int gridY = gridX;
 
 	char[][] gameGrid = new char[gridX][gridY];
@@ -46,7 +46,7 @@ public class Grid {
 		return isOpen;
 	}
 
-	public int checkIfValidDirection(int inputX, int inputY, int direction) {
+	public int checkIfValidDirection(int inputX, int inputY, int direction, int shipLength) {
 
 		// WHATS GOING ON HERE
 
@@ -54,19 +54,19 @@ public class Grid {
 
 		switch (direction) {
 		case NORTH:
-			if (inputY - 1 >= 0) {
+			if (inputY - shipLength >= 0) {
 				validPosition = NORTH;
 			}
 		case EAST:
-			if (inputX + 1 < gameGrid.length) {
+			if (inputX + shipLength < gameGrid.length) {
 				validPosition = EAST;
 			}
 		case SOUTH:
-			if (inputY + 1 < gameGrid.length) {
+			if (inputY + shipLength < gameGrid.length) {
 				validPosition = SOUTH;
 			}
 		case WEST:
-			if (inputX - 1 >= 0) {
+			if (inputX - shipLength >= 0) {
 				validPosition = WEST;
 			}
 		}
@@ -74,9 +74,10 @@ public class Grid {
 		return validPosition;
 	}
 
-	public void placeRandomDestroyer() {
+	public void placeRandomDestroyer(int inputLength) {
 		int shipX = ranPos();
 		int shipY = ranPos();
+		int shipLength = inputLength - 1;
 		boolean inBounds = false;
 
 		while (!checkIfOpen(shipX, shipY)) {
@@ -89,29 +90,37 @@ public class Grid {
 		// Check if its in bounds
 		while (!inBounds) {
 			int ranDirection = chooseRandomDirection();
-			switch (checkIfValidDirection(shipX, shipY, ranDirection)) {
+			switch (checkIfValidDirection(shipX, shipY, ranDirection, shipLength)) {
 			case NORTH:
-				if (checkIfOpen(shipX, shipY - 1)) {
-					gameGrid[shipX][shipY - 1] = 'D';
-					inBounds = true;
+				if (checkIfOpen(shipX, shipY - shipLength)) {
+					for (int i = 1; i <= shipLength; i++) {
+						gameGrid[shipX][shipY - i] = 'D';
+						inBounds = true;
+					}
 				}
 				break;
 			case EAST:
-				if (checkIfOpen(shipX + 1, shipY)) {
-					gameGrid[shipX + 1][shipY] = 'D';
-					inBounds = true;
+				if (checkIfOpen(shipX + shipLength, shipY)) {
+					for (int i = 1; i <= shipLength; i++) {
+						gameGrid[shipX + i][shipY] = 'D';
+						inBounds = true;
+					}
 				}
 				break;
 			case SOUTH:
-				if (checkIfOpen(shipX, shipY + 1)) {
-					gameGrid[shipX][shipY + 1] = 'D';
-					inBounds = true;
+				if (checkIfOpen(shipX, shipY + shipLength)) {
+					for (int i = 1; i <= shipLength; i++) {
+						gameGrid[shipX][shipY + i] = 'D';
+						inBounds = true;
+					}
 				}
 				break;
 			case WEST:
-				if (checkIfOpen(shipX - 1, shipY)) {
-					gameGrid[shipX - 1][shipY] = 'D';
-					inBounds = true;
+				if (checkIfOpen(shipX - shipLength, shipY)) {
+					for (int i = 1; i <= shipLength; i++) {
+						gameGrid[shipX - i][shipY] = 'D';
+						inBounds = true;
+					}
 				}
 				break;
 			}
@@ -122,10 +131,10 @@ public class Grid {
 	public void takeShot(int playerShotY, int playerShotX) {
 		if (checkIfOpen(playerShotX, playerShotY)) {
 			gameGrid[playerShotX][playerShotY] = '~';
-			System.out.println("\nMiss!");
+			System.out.println("\n" + (playerShotY + 1) + ", " + (playerShotX + 1) + " --> Miss!\n");
 		} else {
 			gameGrid[playerShotX][playerShotY] = '#';
-			System.out.println("\nHit!");
+			System.out.println("\n" + (playerShotY + 1) + ", " + (playerShotX + 1) + " --> Hit!\n");
 		}
 	}
 

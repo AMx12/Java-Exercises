@@ -7,8 +7,9 @@ public class Game {
 
 	public void startGame() {
 		grid.initialiseGrid();
-		grid.placeRandomDestroyer();
-		grid.placeRandomDestroyer();
+		grid.placeRandomDestroyer(2);
+		grid.placeRandomDestroyer(3);
+		grid.placeRandomDestroyer(4);
 		System.out.println(grid.displayGrid());
 	}
 
