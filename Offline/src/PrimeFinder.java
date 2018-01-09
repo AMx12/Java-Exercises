@@ -7,7 +7,7 @@ public class PrimeFinder {
 	}
 
 	public String doMath() {
-		long[] numbers = new long[3000000];
+		long[] numbers = new long[1000000];
 		int whileCount = 0;
 		String primeNumbers = "";
 
