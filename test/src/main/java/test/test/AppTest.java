@@ -1,8 +1,12 @@
 package test.test;
 
+import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,10 +20,11 @@ public class AppTest {
 	ExtentReports report;
 	ExtentTest test;
 	WebDriver driver;
+	TakesScreenshot screenshotDriver = (TakesScreenshot) driver;
 
 	// pass scenario
 	@Test(priority = 1, enabled = true)
-	public void verifyHomePageTitle() {
+	public void verifyTitle() {
 
 		// where to create the report file
 		report = new ExtentReports("C:\\dev\\reports\\automationreport.html", true);
@@ -27,10 +32,10 @@ public class AppTest {
 		test = report.startTest("Verify application Title");
 		System.setProperty("webdriver.chrome.driver", "C:\\dev\\webdriver\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		// driver.manage().window().maximize();
 		// add a note to the test
 		test.log(LogStatus.INFO, "Browser started");
-		driver.get("https://www.qa.com/");
+		driver.get("http://www.puzzledragonx.com/");
 		String title = driver.getTitle();
 		System.out.println(title);
 		if (title.equals("IT Training | Project Management Training | Business Skills Training | QA")) {
@@ -53,10 +58,9 @@ public class AppTest {
 			test.log(LogStatus.PASS, "verify logo");
 		} else {
 			test.log(LogStatus.FAIL, "verify logo");
-			// File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			// FileUtils.copyFile(scrFile, new
-			// File("C:\\Users\\ewomack\\Desktop\\java\\Result\\screenshot\\img.jpg"));
-			String image = test.addScreenCapture("C:\\Users\\ewomack\\Desktop\\java\\Result\\screenshot\\img.jpg");
+			File scrFile = screenshotDriver.getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(scrFile, new File("C:\\dev\\reports\\img.png"));
+			String image = test.addScreenCapture("C:\\dev\\reports\\img.png");
 			test.log(LogStatus.FAIL, "verify logo of the application", image);
 		}
 		report.endTest(test);

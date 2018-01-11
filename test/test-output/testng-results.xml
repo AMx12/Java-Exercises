@@ -2,16 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7386" started-at="2018-01-09T16:34:04Z" finished-at="2018-01-09T16:34:11Z">
+  <suite name="Default suite" duration-ms="11587" started-at="2018-01-10T16:27:27Z" finished-at="2018-01-10T16:27:38Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7386" started-at="2018-01-09T16:34:04Z" finished-at="2018-01-09T16:34:11Z">
-      <class name="test.test.DemoSiteTest">
-        <test-method status="PASS" signature="createUser()[pri:1, instance:test.test.DemoSiteTest@223aa2f7]" name="createUser" duration-ms="7370" started-at="2018-01-09T16:34:04Z" finished-at="2018-01-09T16:34:11Z">
+    <test name="Default test" duration-ms="11587" started-at="2018-01-10T16:27:27Z" finished-at="2018-01-10T16:27:38Z">
+      <class name="test.test.ClickingTests">
+        <test-method status="PASS" signature="beforeEveryTest()[pri:0, instance:test.test.ClickingTests@41ab013]" name="beforeEveryTest" is-config="true" duration-ms="16" started-at="2018-01-10T16:27:27Z" finished-at="2018-01-10T16:27:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createUser -->
-      </class> <!-- test.test.DemoSiteTest -->
+        </test-method> <!-- beforeEveryTest -->
+        <test-method status="PASS" signature="draggableTest()[pri:1, instance:test.test.ClickingTests@41ab013]" name="draggableTest" duration-ms="11224" started-at="2018-01-10T16:27:27Z" finished-at="2018-01-10T16:27:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- draggableTest -->
+        <test-method status="PASS" signature="beforeAllTests()[pri:0, instance:test.test.ClickingTests@41ab013]" name="beforeAllTests" is-config="true" duration-ms="0" started-at="2018-01-10T16:27:27Z" finished-at="2018-01-10T16:27:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeAllTests -->
+        <test-method status="PASS" signature="afterAllTests()[pri:0, instance:test.test.ClickingTests@41ab013]" name="afterAllTests" is-config="true" duration-ms="148" started-at="2018-01-10T16:27:38Z" finished-at="2018-01-10T16:27:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterAllTests -->
+        <test-method status="PASS" signature="afterEveryTest()[pri:0, instance:test.test.ClickingTests@41ab013]" name="afterEveryTest" is-config="true" duration-ms="184" started-at="2018-01-10T16:27:38Z" finished-at="2018-01-10T16:27:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEveryTest -->
+      </class> <!-- test.test.ClickingTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

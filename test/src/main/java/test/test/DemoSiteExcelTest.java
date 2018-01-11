@@ -3,7 +3,10 @@ package test.test;
 import static org.testng.Assert.assertEquals;
 
 import java.io.File;
+import java.io.FileInputStream;
 
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.By;
@@ -17,14 +20,16 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class DemoSiteTest {
-
-	File excelInput = new File("C:/dev/inputfiles/excelinput.xls");
+public class DemoSiteExcelTest {
 
 	ExtentReports report;
 	ExtentTest test;
 
 	WebDriver driver;
+
+//	File excelFile = new File("C:/dev/inputfiles/excelinput.xls");
+//	FileInputStream inputStream = new FileInputStream(excelFile);
+//	Workbook inputWorkbook = new XSSFWorkbook(inputStream);
 
 	@Before
 	public void before() {
@@ -34,7 +39,7 @@ public class DemoSiteTest {
 	public void after() {
 	}
 
-	@Test(priority = 1, enabled = true)
+	@Test(priority = 1, enabled = false)
 	public void createUserChrome() throws InterruptedException {
 		report = new ExtentReports("C:/dev/reports/extentchrome.html", true);
 		test = report.startTest("Create new user and verify login");
@@ -93,7 +98,7 @@ public class DemoSiteTest {
 		driver.quit();
 	}
 
-	@Test(priority = 2, enabled = true)
+	@Test(priority = 2, enabled = false)
 	public void createUserFirefox() throws InterruptedException {
 		report = new ExtentReports("C:/dev/reports/extentfirefox.html", true);
 		test = report.startTest("Create new user and verify login");

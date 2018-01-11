@@ -6,7 +6,6 @@
       <class name="test.test.AppTest">
         <methods>
           <include name="verifyLogo"/>
-          <include name="verifyHomePageTitle"/>
         </methods>
       </class> <!-- test.test.AppTest -->
     </classes>
